@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  width: 100vw;
+  height: 100vh;
+  --font-size: 1.5rem;
+
+  --clr-bkg: rgb(26, 26, 26);
+  --clr-prime: rgb(36, 36, 36);
+  --clr-sec: rgb(49, 49, 49);
+  --clr-highlight: rgb(41, 92, 105);
+  --clr-click: rgb(70, 135, 151);
+}
+
+html :is(body, main) {
+  background: var(--clr-bkg);
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+html :is(button, input) {
+  all: unset;
+  font-size: 1.5rem;
+  border-radius: 3rem;
+  font-family: monospace;
+}
+.txt__wrapper {
+  background: var(--clr-prime);
+  display: flex;
+  align-items: center;
+  padding-block: 2rem;
+  padding-inline: 2rem;
+  border-radius: 2rem 2rem 0 0;
+}
+.input__wrapper {
+  display: grid;
+  grid-column: 1fr;
+  gap: 1rem;
+}
+input[type="password"] {
+  background: var(--clr-sec);
+  outline: none;
+  /* font-size: 1.5rem; */
+  padding: 1rem 2rem 1rem;
+  color: var(--clr-highlight);
+  border: 3px solid transparent;
+}
+input[type="password"]:focus {
+  border: 3px solid var(--clr-highlight);
+}
+.valid {
+  background: var(--clr-sec);
+  outline: none;
+
+  padding: 1rem 2rem 1rem;
+  color: var(--clr-highlight);
+  border: 3px solid green;
+}
+.invalid {
+  background: var(--clr-sec);
+  outline: none;
+
+  padding: 1rem 2rem 1rem;
+  color: var(--clr-highlight);
+  border: 3px solid red;
+}
+
+.check__test {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  margin-left: 1rem;
+  position: relative;
+}
+.test {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  margin-left: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-inline: auto;
+  border: 2px solid var(--clr-sec);
+}
+
+.symbol__true {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  margin-left: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-inline: auto;
+  background: rgb(32, 104, 32);
+  border: 2px solid rgb(32, 104, 32);
+}
+
+.symbol__false {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  margin-left: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-inline: auto;
+  background: rgb(187, 23, 23);
+  border: 2px solid rgb(187, 23, 23);
+}
+
+.btn__wrapper {
+  width: 100%;
+  background: var(--clr-prime);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2rem;
+  border-radius: 0 0 2rem 2rem;
+}
+.pw__btn {
+  padding-block: 1rem;
+  padding-inline: 2rem;
+  color: var(--clr-highlight);
+  border: 3px solid var(--clr-highlight);
+  background: none;
+  cursor: pointer;
+}
+.pw__btn:hover {
+  background: var(--clr-highlight);
+  color: var(--clr-bkg);
+}
+.pw__btn:active {
+  background: var(--clr-click);
+}
