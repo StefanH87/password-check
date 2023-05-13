@@ -11,9 +11,12 @@
 
   --clr-bkg: rgb(26, 26, 26);
   --clr-prime: rgb(36, 36, 36);
+  --clr-font: rgb(109, 109, 109, 0.5);
   --clr-sec: rgb(49, 49, 49);
   --clr-highlight: rgb(41, 92, 105);
   --clr-click: rgb(70, 135, 151);
+  --clr-true: rgb(32, 104, 32);
+  --clr-false: rgb(187, 23, 23);
 }
 
 html :is(body, main) {
@@ -26,15 +29,24 @@ html :is(body, main) {
 
 html :is(button, input) {
   all: unset;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   border-radius: 3rem;
   font-family: monospace;
+}
+
+#form-wrapper {
+  display: block;
+  width: 100%;
+  height: 1005;
+
+  padding: 1rem;
+  filter: drop-shadow(8px 8px 30px var(--clr-highlight));
 }
 .txt__wrapper {
   background: var(--clr-prime);
   display: flex;
   align-items: center;
-  padding-block: 2rem;
+  padding-block: 4rem 3rem;
   padding-inline: 2rem;
   border-radius: 2rem 2rem 0 0;
 }
@@ -46,29 +58,13 @@ html :is(button, input) {
 input[type="password"] {
   background: var(--clr-sec);
   outline: none;
-  /* font-size: 1.5rem; */
+
   padding: 1rem 2rem 1rem;
   color: var(--clr-highlight);
   border: 3px solid transparent;
 }
 input[type="password"]:focus {
   border: 3px solid var(--clr-highlight);
-}
-.valid {
-  background: var(--clr-sec);
-  outline: none;
-
-  padding: 1rem 2rem 1rem;
-  color: var(--clr-highlight);
-  border: 3px solid green;
-}
-.invalid {
-  background: var(--clr-sec);
-  outline: none;
-
-  padding: 1rem 2rem 1rem;
-  color: var(--clr-highlight);
-  border: 3px solid red;
 }
 
 .check__test {
@@ -102,8 +98,8 @@ input[type="password"]:focus {
   top: 0;
   left: 0;
   margin-inline: auto;
-  background: rgb(32, 104, 32);
-  border: 2px solid rgb(32, 104, 32);
+  background: var(--clr-true);
+  border: 2px solid var(--clr-true);
 }
 
 .symbol__false {
@@ -116,8 +112,8 @@ input[type="password"]:focus {
   top: 0;
   left: 0;
   margin-inline: auto;
-  background: rgb(187, 23, 23);
-  border: 2px solid rgb(187, 23, 23);
+  background: var(--clr-false);
+  border: 2px solid var(--clr-false);
 }
 
 .btn__wrapper {
@@ -143,4 +139,24 @@ input[type="password"]:focus {
 }
 .pw__btn:active {
   background: var(--clr-click);
+}
+
+/*=====================================*/
+.condition__wrapper {
+  display: block;
+  margin-top: -4rem;
+}
+.condition {
+  width: 80%;
+  margin-left: 5%;
+  margin-bottom: 2rem;
+  list-style-type: circle;
+  /* margin-left: 1.2rem; */
+  font-family: monospace;
+  font-size: 1.1rem;
+  color: var(--clr-font);
+}
+
+.condition:has(li) > li {
+  margin: 0.4rem;
 }
