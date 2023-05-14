@@ -11,10 +11,14 @@
 
 <body>
     <main>
-        <article class="condition__wrapper">
+
+        <article class="condition__wrapper" hidden>
             <ul class="condition">
                 <li>keine leeren Felder</li>
-                <li>min. 5 Buchstaben</li>
+                <li>6 bis 20 Zeichen</li>
+                <li>min. 1 Ziffer</li>
+                <li>min 1 Großbuchstaben</li>
+                <li>min 1 Kleinbuchstaben</li>
             </ul>
         </article>
         <form id="form-wrapper">
@@ -35,12 +39,14 @@
             </span>
 
             <section class="btn__wrapper">
+                <button class="help__btn">?</button>
                 <button class="pw__btn">Check Passwords</button>
+
             </section>
         </form>
     </main>
 
-    <script src="./scripts/add.js"></script>
+    <script src="add.js" type="module"></script>
 </body>
 
 </html>
