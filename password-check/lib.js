@@ -64,3 +64,111 @@ export function helpMenue() {
     helpBtn.style.color = "rgb(41, 92, 105)";
   }
 }
+
+export function resetInput() {
+  const resetBtn = document.querySelector(".reset__btn");
+
+  resetBtn.addEventListener("click", () => {
+    pwInput1.value = "";
+    pwInput2.value = "";
+  });
+}
+
+//=======================================================//
+//     test für refactoring                     //
+//=======================================================//
+
+// function setCircleTrue() {
+//   check.classList.remove("symbol__false");
+//   check.classList.add("symbol__true");
+//   return;
+// }
+// function setCircleFalse() {
+//   check.classList.remove("symbol__true");
+//   check.classList.add("symbol__false");
+//   return;
+// }
+
+// function setInputTrue() {
+//   field.style.border = "3px solid green";
+//   field.style.color = "green";
+//   return;
+// }
+
+// function setInputFalse() {
+//   field.style.border = "3px solid red";
+//   field.style.color = "red";
+//   return;
+// }
+
+// form.forEach((inputEl) => {
+//   inputEl.addEventListener("input", (e) => {
+//     const firstField = pwInput1.value;
+//     const secondField = pwInput2.value;
+//   });
+
+//   if (isPasswordEqual(firstField, secondField)) {
+//     //true
+//     validCheckSingle(firstField, secondField);
+//   } else {
+//     //false
+//   }
+// });
+
+// function validCheckSingle(firstField, secondField) {
+//   if (oneNumberCheck(firstField, secondField)) {
+//   }
+//   if (oneNumberCheck(firstField, secondField)) {
+//   }
+//   if (bigLetterCheck(firstField, secondField)) {
+//   }
+//   if (smallLetterCheck(firstField, secondField)) {
+//   }
+//   if (numberCharsCheck(firstField, secondField)) {
+//   }
+// }
+
+// //-------------Empty Check-----------------//
+// function fieldOneEmpty(firstPw) {
+//   if (firstField.value === "") {
+//     return false;
+//   } else {
+//     return true;
+//   }
+//   function fieldOneEmpty(secondPw) {
+//     if (secondField.value === "") {
+//       return false;
+//     } else {
+//       return true;
+//     }
+//   }
+// }
+// //-------------Equal Check-----------------//
+
+// function isPasswordEqual(firstPw, secondPw) {
+//   return firstField === secondField;
+// }
+
+// //-------------min. 1 Number Check-----------------//
+// function oneNumberCheck(field) {
+//   let oneNumber = /?=.*\d/.test(field);
+//   return oneNumber;
+// }
+
+// //-------------min. 1 Big letter Check-----------------//
+// function bigLetterCheck(field) {
+//   let bigLetter = /?=.*[A-Z]/.test(field);
+//   return bigLetter;
+// }
+
+// //-------------min. 1 small letter-----------------//
+// function smallLetterCheck(field) {
+//   let smallLetters = /?=.*[a-z]/.test(field);
+//   return smallLetters;
+// }
+
+// //-------------min. 6 chars / max 20 chars letter Check-----------------//
+// function numberCharsCheck(field) {
+//   let numberChars = /{6,20}/.test(field);
+//   return numberChars;
+// }

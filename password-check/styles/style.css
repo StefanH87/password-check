@@ -102,6 +102,7 @@ input[type="password"]:focus {
   margin-inline: auto;
   background: var(--clr-true);
   border: 2px solid var(--clr-true);
+  clip-path: polygon(7% 70%, 40% 100%, 100% 20%, 98% 2%, 40% 80%, 15% 60%);
 }
 
 .symbol__false {
@@ -115,7 +116,14 @@ input[type="password"]:focus {
   left: 0;
   margin-inline: auto;
   background: var(--clr-false);
-  border: 2px solid var(--clr-false);
+  border: 2px solid transparent;
+  background: linear-gradient(
+      45deg,
+      transparent 45%,
+      red 45% 55%,
+      transparent 55%
+    ),
+    linear-gradient(135deg, transparent 45%, red 45% 55%, transparent 55%);
 }
 
 .btn__wrapper {
@@ -123,12 +131,13 @@ input[type="password"]:focus {
   background: var(--clr-prime);
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 
   padding-bottom: 2rem;
   border-radius: 0 0 2rem 2rem;
 }
-.help__btn {
+.help__btn,
+.reset__btn {
   border: 3px solid var(--clr-highlight);
   color: var(--clr-highlight);
   width: 3rem;
@@ -136,6 +145,9 @@ input[type="password"]:focus {
   height: 3rem;
   text-align: center;
   border-radius: 50%;
+}
+.reset__btn:active {
+  background: var(--clr-highlight);
 }
 .pw__btn {
   padding-block: 1rem;
@@ -160,8 +172,8 @@ input[type="password"]:focus {
   position: absolute;
   background: var(--clr-prime);
   border-radius: 4rem;
-  top: 45%;
-  left: 15%;
+  top: 40%;
+  left: -70%;
   width: 350px;
   height: 200px;
 }
