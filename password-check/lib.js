@@ -57,11 +57,11 @@ export function helpMenue() {
   if (menueField.style.display === "none") {
     menueField.style.display = "block";
     helpBtn.style.backgroundColor = "rgb(41, 92, 105)";
-    helpBtn.style.color = "rgb(36, 36, 36)";
+    helpBtn.style.color = "rgb(250, 163, 7,0.9)";
   } else {
     menueField.style.display = "none";
     helpBtn.style.backgroundColor = "transparent";
-    helpBtn.style.color = "rgb(41, 92, 105)";
+    helpBtn.style.color = "rgb(250, 163, 7,0.4)";
   }
 }
 

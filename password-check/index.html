@@ -20,16 +20,18 @@
                 <li>min 1 Großbuchstaben</li>
                 <li>min 1 Kleinbuchstaben</li>
             </ul> -->
-        </article>
+        <!-- </article> -->
         <form id="form-wrapper">
             <span class="txt__wrapper">
                 <section class="input__wrapper">
-
-                    <input type="password" name="passcheck" id="left-pw" class="input__field " placeholder="password..">
-
-                    <input type="password" name="passcheck" id="right-pw" class="input__field "
-                        placeholder="password..">
-
+                    <div class="input__shadow">
+                        <input type="password" name="passcheck" id="left-pw" class="input__field "
+                            placeholder="password..">
+                    </div>
+                    <div class="input__shadow">
+                        <input type="password" name="passcheck" id="right-pw" class="input__field "
+                            placeholder="password..">
+                    </div>
                 </section>
                 <section class="check__test">
                     <span class="test"></span>
@@ -39,13 +41,12 @@
             </span>
 
             <section class="btn__wrapper">
-                <button class="help__btn" type="button">?</button>
-                <button class="reset__btn" type="button">R</button>
-
-                <button class="pw__btn" type="button">Check Passwords</button>
+                <div class="check__wrapper"> <button class="help__btn" type="button">?</button></div>
+                <div class="check__wrapper"> <button class="reset__btn" type="button">R</button></div>
+                <div class="check__wrapper"> <button class="pw__btn" type="button">Check Passwords</button></div>
 
             </section>
-            <article class="condition__wrapper" hidden>
+            <article class="condition__wrapper">
                 <ul class="condition">
                     <li>keine leeren Felder</li>
                     <li>6 bis 20 Zeichen</li>
@@ -53,6 +54,7 @@
                     <li>min 1 Großbuchstaben</li>
                     <li>min 1 Kleinbuchstaben</li>
                 </ul>
+            </article>
         </form>
     </main>
 
