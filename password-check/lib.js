@@ -1,7 +1,5 @@
 const pwInput1 = document.querySelector("#left-pw");
 const pwInput2 = document.querySelector("#right-pw");
-const btn = document.querySelector(".pw__btn");
-const form = document.querySelector("#form-wrapper");
 const check = document.querySelector(".test");
 const passwordFields = document.querySelectorAll(".input__field");
 
@@ -21,7 +19,7 @@ export function checkData(event) {
       return;
     }
 
-    if (!validCheck(field)) {
+    if (!validCheck(pwInput1.value, pwInput2.value)) {
       check.classList.remove("symbol__true");
       check.classList.add("symbol__false");
       field.style.border = "3px solid red";
@@ -37,14 +35,16 @@ export function checkData(event) {
   });
 }
 
-export function validCheck(field) {
-  if (pwInput1.value === 0 && pwInput2.value === 0) {
+// export function validCheck(field) {
+
+export function validCheck(password1, password2) {
+  if (password1 === 0 && password2 === 0) {
     return false;
-  } else if (pwInput1.value === "" && pwInput2.value === "") {
+  } else if (password1 === "" && password2 === "") {
     return false;
-  } else if (pwInput1.value !== pwInput2.value) {
+  } else if (password1 !== password2) {
     return;
-  } else if (/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/.test(field.value)) {
+  } else if (/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/.test(password1)) {
     return true;
   }
 }
@@ -172,3 +172,9 @@ export function resetInput() {
 //   let numberChars = /{6,20}/.test(field);
 //   return numberChars;
 // }
+
+export function init() {
+  checkData();
+  helpMenue();
+  resetInput();
+}
